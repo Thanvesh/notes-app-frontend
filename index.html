@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RadaNotes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Login Section -->
+  <div id="loginSection" class="auth-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="loginName" placeholder="Username" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+  </div>
+
+  <!-- Signup Section -->
+  <div id="signupSection" class="auth-container" style="display: none;">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <input type="text" id="signupName" placeholder="Name" required>
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+  <!-- Header -->
+
+  <div id="appSection" style="display: none;">
+    <header>
+      <div class="header-left">
+        <button id="menuIcon"><i class="fa-solid fa-bars"></i></button>
+        <div id="appName"><i class="fa-regular fa-note-sticky"></i> <span>RadaNotes</span></div>
+      </div>
+      <div class="header-center">
+        <div class="search-container">
+
+          <input type="text" id="searchBox" placeholder="Search notes">
+          <div class="btn-cont">
+            <button id="clearSearchBtn" class="clear-button" title="Clear search"><i class="fa-solid fa-x"></i></button>
+            <button id="searchBtn"><i class="fa-solid fa-search"></i></button>
+          </div>
+
+        </div>
+      </div>
+      <div class="header-right">
+        <label for="labelSelect"class="label-container">
+          <i class="fa-solid fa-link"></i>
+          <select id="labelSelect">
+            <option value="">All Labels</option>
+          </select>
+        </label>
+        <button id="logoutBtn"><i class="fa-solid fa-sign-out-alt"></i></button>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="main-cont">
+      <nav id="sidebar">
+        <button id="createNoteBtn"><i class="fa-regular fa-plus"></i> <span>Create Note</span></button>
+        <button id="notesBtn"><i class="fa-regular fa-note-sticky"></i> <span>Notes</span></button>
+        <button id="archivedNotesBtn"><i class="fa-regular fa-folder"></i> <span>Archived Notes</span></button>
+        <button id="remindersBtn"><i class="fa-regular fa-bell"></i> <span>Reminders</span></button>
+        <button id="trashNotesBtn"><i class="fa-regular fa-trash-can"></i> <span>Trash</span></button>
+      </nav>
+
+      <!-- Main Content Area -->
+      <main id="mainContent">
+        <div id="notesContainer"></div>
+      </main>
+    </div>
+
+
+    <!-- Note Modal -->
+    <div id="noteModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="m-c">
+          <h1>Create And Edit Model</h1>
+          <div class="model-content-details">
+            <div class="inside-model-left">
+              <input class="edit" type="text" id="noteTitle" placeholder="Title">
+              <textarea class="edit" id="noteContent" placeholder="Content"></textarea>
+              <input class="edit" type="datetime-local" id="noteReminder">
+              <input class="edit" type="text" id="noteTags" placeholder="Tags (comma separated, max 9)">
+            </div>
+
+            <div class="inside-model-center-right"><input type="color" id="noteColor"></div>
+          </div>
+          <button id="saveNoteBtn"><i class="fa-solid fa-save"></i> Save Note</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
