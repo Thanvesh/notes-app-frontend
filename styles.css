@@ -485,25 +485,125 @@ header {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .auth-container {
-    margin: 50px auto;
+    width: 50%;
+    position:absolute;
+    top: 25%;
+    left: 23%;
+    margin: 0px;
   }
 
   header {
     flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 
-  .header-left, .header-center, .header-right {
-    width: 100%;
+  .header-left, .header-right {
+    width: 30%;
     justify-content: center;
   }
 
+  .header-right{
+    margin-right: 10px;
+  }
+
+  .header-center{
+    width: 80%;
+  }
   .header-center .search-container {
     width: 80%;
   }
 
   #searchBox {
     width: 100%;
+  }
+  #menuIcon {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .label-container{
+    font-size: 18px;
+    gap: 2px;
+
+  }
+
+  .label-container i{
+    font-size: 13px;
+  }
+
+  #labelSelect{
+    height: 20px;
+    padding: 1px 10px;
+
+  }
+  .clear-button {
+
+    font-size: 10px;
+    order: 2;
+  }
+  .header-left #appName {
+    font-size: 18px;
+  }
+  #searchBox {
+    width: 100%;
+  }
+
+  #searchBtn {
+    padding: 5px 13px;
+    border-radius: 10px;
+    order: 1;
+  }
+  
+  #sidebar button {
+    box-shadow: none;
+
+  }
+
+  .modal-content {
+    width: 50%;
+  }
+
+  .m-c>h1 {
+    font-size: 20px;
+  }
+
+  .note-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  .note>p {
+    font-size: 13px;
+  }
+
+  .note-title>span {
+    font-size: 10px;
+    opacity: 0.7;
+  }
+
+  .model-content-details {
+    flex-direction: column;
+  }
+
+  .inside-model-left {
+    margin-bottom: 0px;
+  }
+
+  .inside-model-center-right {
+    align-self: center;
+  }
+
+
+
+  .header-right button {
+    font-size: 18px;
   }
 
   #sidebar {
@@ -518,24 +618,83 @@ header {
 @media (max-width: 480px) {
   header {
     padding: 5px;
+    gap: 2px;
   }
 
   .header-left #appName {
-    font-size: 18px;
+    font-size: 10px;
+
+  }
+  #menuIcon {
+    font-size: 12px;
+  }
+
+  .auth-container {
+    width: 50%;
+    position:absolute;
+    top: 25%;
+    left: 20%;
+    margin: 0px;
+
   }
 
   .header-center .search-container {
     width: 90%;
+    gap:2px;
+  }
+
+  #searchBox {
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    width: 100%;
+  }
+
+  #searchBtn {
+    padding: 4px 7px;
+    border-radius: 5px;
+    order: 1;
+    font-size: 10px;
+    border: 1px solid #fff;
+
+  }
+  .btn-cont {
+    gap: 2px;
+  }
+  .clear-button {
+    padding: 4px 9px;
+    font-size: 10px;
+    border-radius: 4px;
+    order: 2;
+    border: 1px solid #ef0303;
   }
 
   #sidebar {
-    width: 50%;
+    width: 20%;
+    box-shadow: none;
+   
+    padding: 0px;
+    padding-left:3px ;
   }
 
+  #sidebar button {
+    box-shadow: none;
+    font-size: 10px;
+
+  }
+  #sidebar button span{
+    text-align: left;
+    font-size: 10px;
+    overflow-x: auto;
+  
+  }
   #mainContent {
-    width: 50%;
+    width: 80%;
   }
 
+  #sidebar button i{
+    font-size: 10px;
+  }
   .note {
     width: 100%;
     font-size: 14px;
@@ -543,5 +702,25 @@ header {
 
   .noteButtonContainer button {
     font-size: 14px;
+  }
+
+
+  .label-container i{
+    font-size: 10px;
+  }
+
+  #labelSelect{
+    height: 20px;
+    padding: 4px;
+    width: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+
+
+  }
+  #labelSelect option{
+   padding: 4px;
+   font-size: 8px;
+
+
   }
 }
